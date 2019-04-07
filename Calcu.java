@@ -2,11 +2,9 @@ import java.util.ArrayList;
 
 public class Calcu {
     public static int calc(ArrayList<String> input){
-        int res=0;
         int tmp = 0;
 
         System.out.println(input);
-
 
         for (int i=input.size()-1; i>=0; i--) {
             if (input.get(i) == "/") {
@@ -47,8 +45,6 @@ public class Calcu {
             }
         }
 
-        res= Integer.parseInt(input.get(0));
-
-        return res;
+        return Integer.parseInt(input.get(0));
     }
 }
