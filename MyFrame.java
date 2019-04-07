@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 public class MyFrame extends JFrame implements ActionListener {
     private JTextField textField;
     private JLabel lblNewLabel;
-    String name;
+    String input;
 
     public  MyFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,7 +36,7 @@ public class MyFrame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        name = textField.getText();
-        lblNewLabel.setText("Ответ: " + Calcu.calc(Input.inputnorm(name)));
+        input = textField.getText();
+        lblNewLabel.setText("Ответ: " + Calcu.calc(Input.inputnorm(input)));
     }
 }
