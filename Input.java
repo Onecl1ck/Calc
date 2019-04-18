@@ -17,13 +17,27 @@ public class Input {
         }
         return tmp;
     }
-    public static String globalstring(String input){
+    public static String calcbracket(String input){
         String tmp= Calcu.calc(InputConvert.inputnorm(Input.pokanezaebet(input)));
         GlobalVars.remaininput=GlobalVars.leftpart.substring(0,GlobalVars.leftpart.length()-1)+tmp+GlobalVars.rightpart.substring(1,GlobalVars.rightpart.length());
         System.out.println("remaininput:");
         System.out.println(GlobalVars.remaininput);
+        GlobalVars.leftpart="";
+        GlobalVars.rightpart="";
         return GlobalVars.remaininput;
     }
+
+    public static String pokanezaebet2(String input) {
+
+        String tmp=input;
+        int nezaebet=0;
+        while (nezaebet <9){
+            tmp = calcbracket(tmp);
+            nezaebet++;
+        }
+        return tmp;
+    }
+
 
     public static String cutleftbracket(String input) {
         String tmp=input;
