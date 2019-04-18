@@ -37,6 +37,6 @@ public class MyFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         input = textField.getText();
-        lblNewLabel.setText("Ответ: " + Calcu.calc(Input.inputnorm(input)));
+        //lblNewLabel.setText("Ответ: " + Calcu.calc(Input.inputnorm(input)));
     }
 }

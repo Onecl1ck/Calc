@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Calcu {
-    public static int calc(ArrayList<String> input){
+    public static String calc(ArrayList<String> input){
         int tmp = 0;
 
         System.out.println(input);
@@ -44,7 +44,6 @@ public class Calcu {
                 System.out.println(input);
             }
         }
-
-        return Integer.parseInt(input.get(0));
+        return String.valueOf(Integer.parseInt(input.get(0)));
     }
 }
